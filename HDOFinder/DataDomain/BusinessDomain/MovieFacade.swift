@@ -42,8 +42,19 @@ class MovieFacade: NSObject {
         let words = link.components(separatedBy:"-")
         for word in words {
             if word.contains(".html") {
+                
+                // Single film
                 let lastWords = word.components(separatedBy:".")
-                movieId = lastWords[0]
+                let firstWord = lastWords[0]
+                if firstWord.contains(".") {
+                    // Episode
+                    movieId = firstWord.components(separatedBy:".")[0]
+                    break
+                } else {
+                    // Single 
+                    movieId = firstWord
+                }
+            
                 break
             }
         }

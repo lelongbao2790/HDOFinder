@@ -102,19 +102,34 @@ class MainController: NSViewController, MovieFacadeDelegate {
     // -----------
     func requestLinkMovieSuccess(file: AnyObject?) {
         let movie = file as! MovieFile
-        for links in movie.level {
-            if links.quality == "720p" {
-                tfLinkResponse.stringValue = links.file
-                break
+        
+        // Link google, m3u8
+        if movie.level.count > 0 {
+            for links in movie.level {
+                if links.quality == "720p" {
+                    tfLinkResponse.stringValue = links.file
+                    break
+                }
             }
+        } else if movie.file.lengthOfBytes(using: .utf8) > 0 {
+            tfLinkResponse.stringValue = movie.file
+        } else {
+            tfLinkResponse.stringValue = ""
+            showError(error: "Chua có link xem phim")
+        }
+    
+        // Subtitle
+        if movie.subtitle.count > 0 {
+            for subs in movie.subtitle {
+                if subs.code == "vi" {
+                    tfLinkSub.stringValue = subs.file
+                    break
+                }
+            }
+        } else {
+            tfLinkSub.stringValue = ""
         }
         
-        for subs in movie.subtitle {
-            if subs.code == "vi" {
-                tfLinkSub.stringValue = subs.file
-                break
-            }
-        }
         
         showGetLinkSuccess()
     }
