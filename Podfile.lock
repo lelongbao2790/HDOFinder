@@ -1,0 +1,37 @@
+PODS:
+  - Alamofire (4.4.0)
+  - AlamofireObjectMapper (4.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
+  - ObjectMapper (2.2.5)
+  - Realm (2.4.4):
+    - Realm/Headers (= 2.4.4)
+  - Realm/Headers (2.4.4)
+  - RealmSwift (2.4.4):
+    - Realm (= 2.4.4)
+
+DEPENDENCIES:
+  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `master`)
+  - AlamofireObjectMapper (~> 4.0)
+  - RealmSwift
+
+EXTERNAL SOURCES:
+  Alamofire:
+    :branch: master
+    :git: https://github.com/Alamofire/Alamofire.git
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: b03b43cc381ec02eb9855085427186ef89055eef
+    :git: https://github.com/Alamofire/Alamofire.git
+
+SPEC CHECKSUMS:
+  Alamofire: 4c2bf7fa03c4a626163606de0a417568c270575e
+  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
+  Realm: 5a280a1f5a9a3c267bebf4f41ee47911137703d7
+  RealmSwift: 0c02b9f2d4be4301c497ed10e53a0580584eb1dd
+
+PODFILE CHECKSUM: 278247770d17dc8e49daba0afad14461e106945b
+
+COCOAPODS: 1.2.0

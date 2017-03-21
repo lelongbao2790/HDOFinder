@@ -1,0 +1,822 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F093D75B097FEE8BEC25CF1 /* Pods_HDOFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9745C1EA4E949704D02A01 /* Pods_HDOFinderTests.framework */; };
+		8ABB42960B064DD6FBF13E33 /* Pods_HDOFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5775D29FFD6F514A4FE5294 /* Pods_HDOFinder.framework */; };
+		90F8333D60B9341E7FE8A33B /* Pods_HDOFinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E38010DA68257915EDE374 /* Pods_HDOFinderUITests.framework */; };
+		D3F86CED1E7F8C1F00AF1422 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F86CEC1E7F8C1F00AF1422 /* AppDelegate.swift */; };
+		D3F86CF11E7F8C1F00AF1422 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F86CF01E7F8C1F00AF1422 /* Assets.xcassets */; };
+		D3F86CF41E7F8C1F00AF1422 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F86CF21E7F8C1F00AF1422 /* Main.storyboard */; };
+		D3F86CFF1E7F8C1F00AF1422 /* HDOFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F86CFE1E7F8C1F00AF1422 /* HDOFinderTests.swift */; };
+		D3F86D0A1E7F8C1F00AF1422 /* HDOFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F86D091E7F8C1F00AF1422 /* HDOFinderUITests.swift */; };
+		D3F86D211E7F9BFD00AF1422 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F86D201E7F9BFD00AF1422 /* MainController.swift */; };
+		D3F86D251E7FB71400AF1422 /* MovieFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F86D241E7FB71400AF1422 /* MovieFile.swift */; };
+		D3F86D271E7FC0E900AF1422 /* BaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F86D261E7FC0E900AF1422 /* BaseClient.swift */; };
+		D3F86D291E7FC15500AF1422 /* BaseClient+Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F86D281E7FC15500AF1422 /* BaseClient+Movie.swift */; };
+		D3F86D2B1E7FC1F200AF1422 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F86D2A1E7FC1F200AF1422 /* Definition.swift */; };
+		D3F86D2F1E7FD8E500AF1422 /* MovieFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F86D2E1E7FD8E500AF1422 /* MovieFacade.swift */; };
+		D3F86D311E80D57000AF1422 /* ListTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F86D301E80D57000AF1422 /* ListTransform.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3F86CFB1E7F8C1F00AF1422 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3F86CE11E7F8C1F00AF1422 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3F86CE81E7F8C1F00AF1422;
+			remoteInfo = HDOFinder;
+		};
+		D3F86D061E7F8C1F00AF1422 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3F86CE11E7F8C1F00AF1422 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3F86CE81E7F8C1F00AF1422;
+			remoteInfo = HDOFinder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		180413802044210D03A62D25 /* Pods-HDOFinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDOFinderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HDOFinderTests/Pods-HDOFinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		4E9528AB77D6127C2D9AA9F5 /* Pods-HDOFinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDOFinderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HDOFinderUITests/Pods-HDOFinderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		502D33A0C0FE57AE169D9E80 /* Pods-HDOFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDOFinderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HDOFinderUITests/Pods-HDOFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		620850244CE57E3C8558B3B7 /* Pods-HDOFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDOFinderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HDOFinderTests/Pods-HDOFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A5775D29FFD6F514A4FE5294 /* Pods_HDOFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HDOFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B36A1186DAA3C3BBD656423A /* Pods-HDOFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDOFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HDOFinder/Pods-HDOFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		BD9745C1EA4E949704D02A01 /* Pods_HDOFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HDOFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3F86CE91E7F8C1F00AF1422 /* HDOFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HDOFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3F86CEC1E7F8C1F00AF1422 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D3F86CF01E7F8C1F00AF1422 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3F86CF31E7F8C1F00AF1422 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D3F86CF51E7F8C1F00AF1422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3F86CFA1E7F8C1F00AF1422 /* HDOFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HDOFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3F86CFE1E7F8C1F00AF1422 /* HDOFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDOFinderTests.swift; sourceTree = "<group>"; };
+		D3F86D001E7F8C1F00AF1422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3F86D051E7F8C1F00AF1422 /* HDOFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HDOFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3F86D091E7F8C1F00AF1422 /* HDOFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDOFinderUITests.swift; sourceTree = "<group>"; };
+		D3F86D0B1E7F8C1F00AF1422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3F86D201E7F9BFD00AF1422 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		D3F86D241E7FB71400AF1422 /* MovieFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieFile.swift; sourceTree = "<group>"; };
+		D3F86D261E7FC0E900AF1422 /* BaseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseClient.swift; sourceTree = "<group>"; };
+		D3F86D281E7FC15500AF1422 /* BaseClient+Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseClient+Movie.swift"; sourceTree = "<group>"; };
+		D3F86D2A1E7FC1F200AF1422 /* Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
+		D3F86D2E1E7FD8E500AF1422 /* MovieFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieFacade.swift; sourceTree = "<group>"; };
+		D3F86D301E80D57000AF1422 /* ListTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTransform.swift; sourceTree = "<group>"; };
+		D520B66FC26788CA7BF1ED4E /* Pods-HDOFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDOFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-HDOFinder/Pods-HDOFinder.release.xcconfig"; sourceTree = "<group>"; };
+		D7E38010DA68257915EDE374 /* Pods_HDOFinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HDOFinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3F86CE61E7F8C1F00AF1422 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ABB42960B064DD6FBF13E33 /* Pods_HDOFinder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3F86CF71E7F8C1F00AF1422 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F093D75B097FEE8BEC25CF1 /* Pods_HDOFinderTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3F86D021E7F8C1F00AF1422 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90F8333D60B9341E7FE8A33B /* Pods_HDOFinderUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17968FC6C1E67AED9DB317E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B36A1186DAA3C3BBD656423A /* Pods-HDOFinder.debug.xcconfig */,
+				D520B66FC26788CA7BF1ED4E /* Pods-HDOFinder.release.xcconfig */,
+				620850244CE57E3C8558B3B7 /* Pods-HDOFinderTests.debug.xcconfig */,
+				180413802044210D03A62D25 /* Pods-HDOFinderTests.release.xcconfig */,
+				502D33A0C0FE57AE169D9E80 /* Pods-HDOFinderUITests.debug.xcconfig */,
+				4E9528AB77D6127C2D9AA9F5 /* Pods-HDOFinderUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D3F86CE01E7F8C1F00AF1422 = {
+			isa = PBXGroup;
+			children = (
+				D3F86CEB1E7F8C1F00AF1422 /* HDOFinder */,
+				D3F86CFD1E7F8C1F00AF1422 /* HDOFinderTests */,
+				D3F86D081E7F8C1F00AF1422 /* HDOFinderUITests */,
+				D3F86CEA1E7F8C1F00AF1422 /* Products */,
+				17968FC6C1E67AED9DB317E1 /* Pods */,
+				F22D2F023903A05BB04A329E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D3F86CEA1E7F8C1F00AF1422 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3F86CE91E7F8C1F00AF1422 /* HDOFinder.app */,
+				D3F86CFA1E7F8C1F00AF1422 /* HDOFinderTests.xctest */,
+				D3F86D051E7F8C1F00AF1422 /* HDOFinderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3F86CEB1E7F8C1F00AF1422 /* HDOFinder */ = {
+			isa = PBXGroup;
+			children = (
+				D3F86D1C1E7F917F00AF1422 /* Services */,
+				D3F86D1D1E7F917F00AF1422 /* Utils */,
+				D3F86D171E7F910100AF1422 /* Controller */,
+				D3F86D181E7F910100AF1422 /* DataDomain */,
+				D3F86CEC1E7F8C1F00AF1422 /* AppDelegate.swift */,
+				D3F86CF01E7F8C1F00AF1422 /* Assets.xcassets */,
+				D3F86CF21E7F8C1F00AF1422 /* Main.storyboard */,
+				D3F86CF51E7F8C1F00AF1422 /* Info.plist */,
+			);
+			path = HDOFinder;
+			sourceTree = "<group>";
+		};
+		D3F86CFD1E7F8C1F00AF1422 /* HDOFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				D3F86CFE1E7F8C1F00AF1422 /* HDOFinderTests.swift */,
+				D3F86D001E7F8C1F00AF1422 /* Info.plist */,
+			);
+			path = HDOFinderTests;
+			sourceTree = "<group>";
+		};
+		D3F86D081E7F8C1F00AF1422 /* HDOFinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3F86D091E7F8C1F00AF1422 /* HDOFinderUITests.swift */,
+				D3F86D0B1E7F8C1F00AF1422 /* Info.plist */,
+			);
+			path = HDOFinderUITests;
+			sourceTree = "<group>";
+		};
+		D3F86D171E7F910100AF1422 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D3F86D201E7F9BFD00AF1422 /* MainController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D3F86D181E7F910100AF1422 /* DataDomain */ = {
+			isa = PBXGroup;
+			children = (
+				D3F86D191E7F910100AF1422 /* BusinessDomain */,
+				D3F86D1A1E7F910100AF1422 /* DataManager */,
+				D3F86D1B1E7F910100AF1422 /* Model */,
+			);
+			path = DataDomain;
+			sourceTree = "<group>";
+		};
+		D3F86D191E7F910100AF1422 /* BusinessDomain */ = {
+			isa = PBXGroup;
+			children = (
+				D3F86D2E1E7FD8E500AF1422 /* MovieFacade.swift */,
+			);
+			path = BusinessDomain;
+			sourceTree = "<group>";
+		};
+		D3F86D1A1E7F910100AF1422 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		D3F86D1B1E7F910100AF1422 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3F86D241E7FB71400AF1422 /* MovieFile.swift */,
+				D3F86D301E80D57000AF1422 /* ListTransform.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3F86D1C1E7F917F00AF1422 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D3F86D261E7FC0E900AF1422 /* BaseClient.swift */,
+				D3F86D281E7FC15500AF1422 /* BaseClient+Movie.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D3F86D1D1E7F917F00AF1422 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D3F86D1E1E7F917F00AF1422 /* Constant */,
+				D3F86D1F1E7F917F00AF1422 /* ThirdLibrary */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D3F86D1E1E7F917F00AF1422 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				D3F86D2A1E7FC1F200AF1422 /* Definition.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		D3F86D1F1E7F917F00AF1422 /* ThirdLibrary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdLibrary;
+			sourceTree = "<group>";
+		};
+		F22D2F023903A05BB04A329E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5775D29FFD6F514A4FE5294 /* Pods_HDOFinder.framework */,
+				BD9745C1EA4E949704D02A01 /* Pods_HDOFinderTests.framework */,
+				D7E38010DA68257915EDE374 /* Pods_HDOFinderUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3F86CE81E7F8C1F00AF1422 /* HDOFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3F86D0E1E7F8C1F00AF1422 /* Build configuration list for PBXNativeTarget "HDOFinder" */;
+			buildPhases = (
+				C6FE55FE5A31FBE8D3C5A0CF /* [CP] Check Pods Manifest.lock */,
+				D3F86CE51E7F8C1F00AF1422 /* Sources */,
+				D3F86CE61E7F8C1F00AF1422 /* Frameworks */,
+				D3F86CE71E7F8C1F00AF1422 /* Resources */,
+				1BE1D62FF91D8EA426614131 /* [CP] Embed Pods Frameworks */,
+				B282BD93D3BBCF65BAA0B5C1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HDOFinder;
+			productName = HDOFinder;
+			productReference = D3F86CE91E7F8C1F00AF1422 /* HDOFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3F86CF91E7F8C1F00AF1422 /* HDOFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3F86D111E7F8C1F00AF1422 /* Build configuration list for PBXNativeTarget "HDOFinderTests" */;
+			buildPhases = (
+				EC05F56B5252F8D52157D09C /* [CP] Check Pods Manifest.lock */,
+				D3F86CF61E7F8C1F00AF1422 /* Sources */,
+				D3F86CF71E7F8C1F00AF1422 /* Frameworks */,
+				D3F86CF81E7F8C1F00AF1422 /* Resources */,
+				9030C5101E768D6642B1FC4C /* [CP] Embed Pods Frameworks */,
+				054FEBAD21F81154A60AF654 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3F86CFC1E7F8C1F00AF1422 /* PBXTargetDependency */,
+			);
+			name = HDOFinderTests;
+			productName = HDOFinderTests;
+			productReference = D3F86CFA1E7F8C1F00AF1422 /* HDOFinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D3F86D041E7F8C1F00AF1422 /* HDOFinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3F86D141E7F8C1F00AF1422 /* Build configuration list for PBXNativeTarget "HDOFinderUITests" */;
+			buildPhases = (
+				7A018CFD4987A1BAA4310C80 /* [CP] Check Pods Manifest.lock */,
+				D3F86D011E7F8C1F00AF1422 /* Sources */,
+				D3F86D021E7F8C1F00AF1422 /* Frameworks */,
+				D3F86D031E7F8C1F00AF1422 /* Resources */,
+				83B4F33D6A7C1A263DAD50B7 /* [CP] Embed Pods Frameworks */,
+				D930AE3111D645D64EF98601 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3F86D071E7F8C1F00AF1422 /* PBXTargetDependency */,
+			);
+			name = HDOFinderUITests;
+			productName = HDOFinderUITests;
+			productReference = D3F86D051E7F8C1F00AF1422 /* HDOFinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3F86CE11E7F8C1F00AF1422 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Bao (Brian) L. LE";
+				TargetAttributes = {
+					D3F86CE81E7F8C1F00AF1422 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = KJZPELTE9E;
+						ProvisioningStyle = Automatic;
+					};
+					D3F86CF91E7F8C1F00AF1422 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = KJZPELTE9E;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D3F86CE81E7F8C1F00AF1422;
+					};
+					D3F86D041E7F8C1F00AF1422 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = KJZPELTE9E;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D3F86CE81E7F8C1F00AF1422;
+					};
+				};
+			};
+			buildConfigurationList = D3F86CE41E7F8C1F00AF1422 /* Build configuration list for PBXProject "HDOFinder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3F86CE01E7F8C1F00AF1422;
+			productRefGroup = D3F86CEA1E7F8C1F00AF1422 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3F86CE81E7F8C1F00AF1422 /* HDOFinder */,
+				D3F86CF91E7F8C1F00AF1422 /* HDOFinderTests */,
+				D3F86D041E7F8C1F00AF1422 /* HDOFinderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3F86CE71E7F8C1F00AF1422 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3F86CF11E7F8C1F00AF1422 /* Assets.xcassets in Resources */,
+				D3F86CF41E7F8C1F00AF1422 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3F86CF81E7F8C1F00AF1422 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3F86D031E7F8C1F00AF1422 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		054FEBAD21F81154A60AF654 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HDOFinderTests/Pods-HDOFinderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BE1D62FF91D8EA426614131 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HDOFinder/Pods-HDOFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A018CFD4987A1BAA4310C80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		83B4F33D6A7C1A263DAD50B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HDOFinderUITests/Pods-HDOFinderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9030C5101E768D6642B1FC4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HDOFinderTests/Pods-HDOFinderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B282BD93D3BBCF65BAA0B5C1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HDOFinder/Pods-HDOFinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6FE55FE5A31FBE8D3C5A0CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D930AE3111D645D64EF98601 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HDOFinderUITests/Pods-HDOFinderUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC05F56B5252F8D52157D09C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3F86CE51E7F8C1F00AF1422 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3F86D211E7F9BFD00AF1422 /* MainController.swift in Sources */,
+				D3F86D271E7FC0E900AF1422 /* BaseClient.swift in Sources */,
+				D3F86D2F1E7FD8E500AF1422 /* MovieFacade.swift in Sources */,
+				D3F86CED1E7F8C1F00AF1422 /* AppDelegate.swift in Sources */,
+				D3F86D291E7FC15500AF1422 /* BaseClient+Movie.swift in Sources */,
+				D3F86D2B1E7FC1F200AF1422 /* Definition.swift in Sources */,
+				D3F86D311E80D57000AF1422 /* ListTransform.swift in Sources */,
+				D3F86D251E7FB71400AF1422 /* MovieFile.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3F86CF61E7F8C1F00AF1422 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3F86CFF1E7F8C1F00AF1422 /* HDOFinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3F86D011E7F8C1F00AF1422 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3F86D0A1E7F8C1F00AF1422 /* HDOFinderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3F86CFC1E7F8C1F00AF1422 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3F86CE81E7F8C1F00AF1422 /* HDOFinder */;
+			targetProxy = D3F86CFB1E7F8C1F00AF1422 /* PBXContainerItemProxy */;
+		};
+		D3F86D071E7F8C1F00AF1422 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3F86CE81E7F8C1F00AF1422 /* HDOFinder */;
+			targetProxy = D3F86D061E7F8C1F00AF1422 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D3F86CF21E7F8C1F00AF1422 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3F86CF31E7F8C1F00AF1422 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3F86D0C1E7F8C1F00AF1422 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D3F86D0D1E7F8C1F00AF1422 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		D3F86D0F1E7F8C1F00AF1422 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B36A1186DAA3C3BBD656423A /* Pods-HDOFinder.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KJZPELTE9E;
+				INFOPLIST_FILE = HDOFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = Bao.HDOFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D3F86D101E7F8C1F00AF1422 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D520B66FC26788CA7BF1ED4E /* Pods-HDOFinder.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KJZPELTE9E;
+				INFOPLIST_FILE = HDOFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = Bao.HDOFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		D3F86D121E7F8C1F00AF1422 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 620850244CE57E3C8558B3B7 /* Pods-HDOFinderTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KJZPELTE9E;
+				INFOPLIST_FILE = HDOFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bao.HDOFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HDOFinder.app/Contents/MacOS/HDOFinder";
+			};
+			name = Debug;
+		};
+		D3F86D131E7F8C1F00AF1422 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 180413802044210D03A62D25 /* Pods-HDOFinderTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KJZPELTE9E;
+				INFOPLIST_FILE = HDOFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bao.HDOFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HDOFinder.app/Contents/MacOS/HDOFinder";
+			};
+			name = Release;
+		};
+		D3F86D151E7F8C1F00AF1422 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 502D33A0C0FE57AE169D9E80 /* Pods-HDOFinderUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KJZPELTE9E;
+				INFOPLIST_FILE = HDOFinderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bao.HDOFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = HDOFinder;
+			};
+			name = Debug;
+		};
+		D3F86D161E7F8C1F00AF1422 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E9528AB77D6127C2D9AA9F5 /* Pods-HDOFinderUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KJZPELTE9E;
+				INFOPLIST_FILE = HDOFinderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bao.HDOFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = HDOFinder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3F86CE41E7F8C1F00AF1422 /* Build configuration list for PBXProject "HDOFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3F86D0C1E7F8C1F00AF1422 /* Debug */,
+				D3F86D0D1E7F8C1F00AF1422 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3F86D0E1E7F8C1F00AF1422 /* Build configuration list for PBXNativeTarget "HDOFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3F86D0F1E7F8C1F00AF1422 /* Debug */,
+				D3F86D101E7F8C1F00AF1422 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3F86D111E7F8C1F00AF1422 /* Build configuration list for PBXNativeTarget "HDOFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3F86D121E7F8C1F00AF1422 /* Debug */,
+				D3F86D131E7F8C1F00AF1422 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3F86D141E7F8C1F00AF1422 /* Build configuration list for PBXNativeTarget "HDOFinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3F86D151E7F8C1F00AF1422 /* Debug */,
+				D3F86D161E7F8C1F00AF1422 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D3F86CE11E7F8C1F00AF1422 /* Project object */;
+}
