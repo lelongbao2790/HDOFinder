@@ -21,8 +21,8 @@ extension BaseClient {
      */
     func getFileMovie(episode:String, link:String, fid:String, token:String, onCompletion:@escaping ServiceGetResponse) {
         
-        let token = String(format: API.kFrontEpisode,episode, fid, token)
-        let urlRequest = API.kBaseUrl + token
+        let url = String(format: API.kFrontEpisode,episode, fid, token)
+        let urlRequest = API.kBaseUrl + url
         
         Alamofire.request(urlRequest,
                           method: .get,
@@ -36,6 +36,25 @@ extension BaseClient {
                 case .failure(let error): onCompletion(false, error as NSError?, nil); break
                 
             }
+        }
+    }
+    
+    /**
+     * Return token movie
+     */
+    func getTokenMovie(link: String, onCompletion:@escaping ServiceGetResponse) {
+        
+        if let url = URL(string: link) {
+            do {
+                let contents = try String(contentsOf: url) as String
+                onCompletion(true, nil, contents as AnyObject?)
+            } catch {
+                // contents could not be loaded
+                onCompletion(false, nil, nil)
+            }
+        } else {
+            // the URL was bad!
+            onCompletion(false, nil, nil)
         }
     }
     

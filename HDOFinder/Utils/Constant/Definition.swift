@@ -10,6 +10,12 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
+struct Common {
+    static let kHTML = ".html"
+    static let kDot = "."
+    static let kDefaultEpi = "1"
+}
+
 struct API {
     
     static let kBaseUrl = "http://hdonline.vn"

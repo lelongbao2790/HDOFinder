@@ -41,6 +41,60 @@ class MainController: NSViewController, MovieFacadeDelegate {
         MovieFacade.shared.movieFacadeDelegate = self
     }
     
+    /**
+     * Request get link
+     */
+    func requestLink(token: String, movieId: String) -> Void {
+        
+        if btnSingleFilm.state == NSOnState {
+            // Phim le
+            MovieFacade.shared.requestLinkMovie(episode:Common.kDefaultEpi, link: tfInputLink.stringValue, movieID: movieId, token: token)
+            
+        } else if btnEpisodeFilm.state == NSOnState {
+            // Phim bo
+            if tfEpisode.stringValue.lengthOfBytes(using: .utf8) > 0 {
+                
+                MovieFacade.shared.requestLinkMovie(episode:tfEpisode.stringValue,
+                                                    link: tfInputLink.stringValue,
+                                                    movieID: movieId,
+                                                    token: token)
+            } else {
+                showStatus(text: "Lỗi! Chưa nhập tập phim", isError: true)
+            }
+        } else {
+            showStatus(text: "Lỗi! Loại phim chưa check", isError: true)
+        }
+    }
+    
+    /**
+     * Validate field
+     */
+    func validateField() -> Bool {
+        let token = MovieFacade.shared.tokenId
+        if  token.lengthOfBytes(using: .utf8) > 0 &&
+            tfInputLink.stringValue.lengthOfBytes(using: .utf8) > 0 &&
+            tfInputLink.stringValue.contains(Common.kHTML) {
+            return true
+            
+        } else {
+            showStatus(text: "Lỗi! Kiểm tra link nhập vào", isError: true)
+            return false
+        }
+    }
+    
+    func showStatus(text:String, isError:Bool) -> Void {
+        if isError {
+            tfError.textColor = NSColor.red
+            tfError.stringValue = text
+        } else {
+            tfError.textColor = NSColor.blue
+            tfError.stringValue = text
+        }
+    }
+    
+    // -----------
+    // MARK: - IBAction
+    // -----------
     @IBAction func btnSingleFilm(_ sender: Any) {
         tfEpisode.isEnabled = false
         
@@ -62,39 +116,15 @@ class MainController: NSViewController, MovieFacadeDelegate {
     }
     
     @IBAction func btnGetLink(_ sender: Any) {
+        showStatus(text: "Đang lấy link ...", isError: true)
         
+        // Get movie id and token
         let movieId = MovieFacade.shared.getMovieId(link: tfInputLink.stringValue)
-        let token = "NmY1MjY0NDQ0YzZiMzA2YzMzNTg1NDZkNjI1ODRlNDc1NTMyNWE0YjYxNTg2NTQ2MzMzMDMzMmI0NTQzNzc2OTM4NDEzZDNk"
+        let token = MovieFacade.shared.getToken(link: tfInputLink.stringValue)
         
-        if tfInputLink.stringValue.lengthOfBytes(using: .utf8) > 0 && tfInputLink.stringValue.contains(".html") {
-
-            if btnSingleFilm.state == NSOnState {
-                // Phim le
-                MovieFacade.shared.requestLinkMovie(episode:"1", link: tfInputLink.stringValue, movieID: movieId, token: token)
-                
-            } else if btnEpisodeFilm.state == NSOnState {
-                // Phim bo
-                if tfEpisode.stringValue.lengthOfBytes(using: .utf8) > 0 {
-                    MovieFacade.shared.requestLinkMovie(episode:tfEpisode.stringValue, link: tfInputLink.stringValue, movieID: movieId, token: token)
-                } else {
-                    showError(error: "Lỗi! Chưa nhập tập phim")
-                }
-            } else {
-                showError(error: "Lỗi! Loại phim chưa check")
-            }
-        } else {
-            showError(error: "Lỗi! Kiểm tra link nhập vào")
+        if validateField() {
+            requestLink(token: token, movieId: movieId)
         }
-    }
-    
-    func showError(error:String) -> Void {
-        tfError.textColor = NSColor.red
-        tfError.stringValue = error
-    }
-    
-    func showGetLinkSuccess() -> Void {
-        tfError.textColor = NSColor.blue
-        tfError.stringValue = "Lấy link thành công"
     }
     
     // -----------
@@ -115,7 +145,7 @@ class MainController: NSViewController, MovieFacadeDelegate {
             tfLinkResponse.stringValue = movie.file
         } else {
             tfLinkResponse.stringValue = ""
-            showError(error: "Chua có link xem phim")
+            showStatus(text: "Chua có link xem phim", isError: true)
         }
     
         // Subtitle
@@ -130,12 +160,11 @@ class MainController: NSViewController, MovieFacadeDelegate {
             tfLinkSub.stringValue = ""
         }
         
-        
-        showGetLinkSuccess()
+        showStatus(text: "Lấy link thành công", isError: false)
     }
     
     func requestLinkMovieFail(sender: AnyObject?) {
-        showError(error: "Lấy link thất bại")
+        showStatus(text: "Lấy link thất bại", isError: true)
     }
     
 }
